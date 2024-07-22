@@ -1,0 +1,119 @@
+.result-modal {
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: #d7fcf8;
+    text-align: center;
+}
+
+.result-modal[open] {
+    animation: slide-in-from-top 0.35s ease-out;
+}
+
+.result-modal::backdrop {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.result-modal .x-sign-parent {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    color: #f27474;
+    border: 4px solid #f27474;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+.result-modal .x-sign-parent span {
+    animation: swal2-animate-error-x-mark .7s infinite;
+}
+.result-modal h2 {
+    /*font-family: 'Handjet', monospace;*/
+    margin: 0 0 1rem 0;
+    /*font-size: 3rem;*/
+    /*text-transform: uppercase;*/
+}
+
+.result-modal progress {
+    width: 100%;
+    height: 1.5rem;
+    margin: 0;
+    accent-color: #46cebe;
+}
+
+.result-modal p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.result-modal p strong {
+    color: #10655b;
+}
+
+.result-modal form {
+    /*text-align: right;*/
+}
+
+.result-modal button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #12352f;
+    color: #edfcfa;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.result-modal button:hover {
+    background: #051715;
+}
+
+@keyframes slide-in-from-top {
+    0% {
+        transform: translateY(-15%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes swal2-animate-error-x-mark {
+    0% {
+        margin-top: 1.625em;
+        transform: scale(0.4);
+        opacity: 0;
+    }
+    50% {
+        margin-top: 1.625em;
+        transform: scale(0.6);
+        opacity: 0;
+    }
+
+    80% {
+        margin-top: -0.375em;
+        transform: scale(1.5);
+    }
+    100% {
+        margin-top: 0;
+        transform: scale(1.25);
+        opacity: 1;
+    }
+
+}
